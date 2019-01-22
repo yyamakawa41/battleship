@@ -91,15 +91,7 @@ describe('fire', function(){
 	});
 
 	it('should NOT record damage if there is no ship at my coordinates', function(){
-		var player = {
-			ships: [
-				{
-					locations: [[0, 0]],
-					damage: []
-				}
-			]
-		};
-
+		
 		fire(player, [9, 9]);
 
 		expect(player.ships[0].damage).to.be empty;
